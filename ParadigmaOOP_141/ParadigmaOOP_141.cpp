@@ -35,52 +35,10 @@ public:
     ~pelajar() {
         cout << "pelajar dihapus\n" << endl;
     }
-
+    string perkenalan() {
+        return "Haloo nama saya Hariz " + nama + "dari SMA 3 JAKARTA " + sekolah;
+    }
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -88,7 +46,11 @@ public:
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    pelajar siswa1("Ahmad Jawir", "SMA 3 JAKARTA");
+    cout << siswa1.perkenalan();
+    cout << "hasil = " << siswa1.jumlah(10, 90) << endl;
+
+    return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
