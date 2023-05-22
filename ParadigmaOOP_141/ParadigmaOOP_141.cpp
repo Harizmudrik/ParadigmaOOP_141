@@ -13,6 +13,7 @@ public:
         nama(pNama) {
         cout << "orang dibuat\n" << endl;
     }
+
 };
 
 
