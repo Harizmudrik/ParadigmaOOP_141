@@ -56,24 +56,40 @@ void dokter::tambahPasien(pasien* pPasien) {
     daftar_pasien.push_back(pPasien);
     pPasien->tambahDokter(this);
 }
+void dokter::cetakPasien() {
+    cout << "Daftar Pasien dari dokter \"" << this->nama << "\":\n";
+    for (auto& a : daftar_pasien) {
+        cout << a->nama << "\n";
+
+    }
+    cout << endl;
+}
 
 
+int main() {
+    dokter* varDokter1 = new dokter("dr.Budi");
+    dokter* varDokter2 = new dokter("dr.Tono");
+    pasien* varPasien1 = new pasien("Andi");
+    pasien* varPasien2 = new pasien("Lia");
+
+    varDokter1->tambahPasien(varPasien1);
+    varDokter1->tambahPasien(varPasien2);
+    varDokter2->tambahPasien(varPasien1);
+
+    varDokter1->cetakPasien();
+    varDokter2->cetakPasien();
+    varPasien1->cetakDokter();
+    varPasien2->cetakDokter();
+
+    delete varPasien1;
+    delete varPasien2;
+    delete varDokter1;
+    delete varDokter2;
+
+    return 0;
 
 
-
-
-
-
-
-
-
-
-
-
-
-int main()
-{
-    std::cout << "Hello World!\n";
+   
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
